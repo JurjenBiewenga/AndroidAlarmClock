@@ -2,6 +2,7 @@ package lunosis.alarm.receivers;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.Vibrator;
 import android.support.v4.content.WakefulBroadcastReceiver;
@@ -10,6 +11,7 @@ import android.util.Log;
 import java.io.Console;
 
 import lunosis.alarm.AlarmActivity;
+import lunosis.alarm.AlarmData;
 
 public class AlarmReceiver extends WakefulBroadcastReceiver {
     @Override
@@ -21,8 +23,8 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
         //v.vibrate(50);
         //v.vibrate(new long[]{0, 25,25,25,25,25,25,25,25,25,25}, -1);
         Intent i = new Intent(context, AlarmActivity.class);
-        i.putExtra("Index", intent.getExtras().getInt("Index"));
-        i.putExtra("Intent", intent);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.putExtra("bundle", intent.getBundleExtra("bundle"));
         context.startActivity(i);
 //        wl.release();
         completeWakefulIntent(intent);

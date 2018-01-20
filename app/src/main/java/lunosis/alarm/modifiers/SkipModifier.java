@@ -10,14 +10,8 @@ public class SkipModifier extends AlarmModifier
     @Override
     public AlarmData Execute(AlarmData data)
     {
-        data.skipNext = true;
+        data.setSkipNext(true);
         return data;
-    }
-
-    @Override
-    public RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
-    {
-        return null;
     }
 
     @Override

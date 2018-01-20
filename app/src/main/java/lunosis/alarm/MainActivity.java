@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
         view.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public void StartAlarmEditor(int index)
+    public void StartAlarmEditor(AlarmData data)
     {
         Intent i = new Intent(this, AlarmEditor.class);
-        i.putExtra("Index", index);
+        i.putExtra("AlarmData", data);
         startActivityForResult(i, ALARM_DATA_EDITOR);
     }
 

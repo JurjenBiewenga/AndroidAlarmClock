@@ -109,6 +109,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <Switch
+            android:id="@+id/skipNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skip Next"/>
+
         <Button
             android:id="@+id/ringtoneButton"
             android:layout_width="match_parent"
@@ -121,10 +127,5 @@
             android:layout_height="wrap_content"
             android:text="Test"/>
 
-        <Button
-        android:id="@+id/SaveButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save" />
     </LinearLayout>
 </ScrollView>
